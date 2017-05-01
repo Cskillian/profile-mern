@@ -12,7 +12,7 @@
 		"react-dom": "^15.5.4",
 		"react-router": "^4.1.1",
 		"update-mongo": "0.0.4",
-		"mongoose-unique-validator": "^1.0.5",
+		"mongoose-unique-validator": "^1.0.5"
 	},
 	"devDependencies": {
 		"babel-core": "^6.3.13",
