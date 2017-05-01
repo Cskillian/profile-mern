@@ -8,6 +8,7 @@
     "express": "^4.15.2",
     "mongodb": "^2.2.26",
     "mongoose": "^4.9.6",
+    "mongoose-unique-validator": "^1.0.5",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router": "^4.1.1",
