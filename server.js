@@ -1,21 +1,40 @@
+var express = require('express');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var mongodb = require('mongodb');
+var react = require('react');
+var reactDom = require('react-dom');
+var reactRouter = require('react-router');
 
-// Modules
-var express = require(`express`);
-var path = require(`path`);
+//schema
+var userModel = require('./models/userModel.js');
 
-// Express Port/App Declaration
-var PORT = process.env.PORT || 3000;
+//express
 var app = express();
+var PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.static(path.join(__dirname, 'public')));
+//Bodyparser
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.text());
+app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-// Routes
-app.get(`*`, function(req, res) {
-  res.sendFile('public/index.html', { root: __dirname });
+//serve our public folder
+app.use(express.static('./public'));
+
+//mongoose
+mongoose.connect('mongodb://localhost/3000/profile-mern');
+var db = mongoose.connection;
+
+db.on('error', function (err) {
+  console.log('Mongoose Error: ', err);
 });
 
-// Connection to PORT
+db.once('open', function () {
+  console.log('Mongoose connection successful.');
+});
+
+
 app.listen(PORT, function() {
-  console.log(`Listening On Port: ${PORT}`);
+  console.log("App listening on PORT: " + PORT);
 });

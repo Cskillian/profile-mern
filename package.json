@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
 	"name": "profile-mern",
 	"version": "1.0.0",
 	"description": "",
@@ -34,4 +35,36 @@
 		"url": "https://github.com/Cskillian/profile-mern/issues"
 	},
 	"homepage": "https://github.com/Cskillian/profile-mern#readme"
+=======
+  "name": "profile-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.26",
+    "mongoose": "^4.9.6",
+    "mongoose-unique-validator": "^1.0.5",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "update-mongo": "0.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cskillian/profile-mern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cskillian/profile-mern/issues"
+  },
+  "homepage": "https://github.com/Cskillian/profile-mern#readme"
+>>>>>>> 899fb0af24683fe2d721ef162c9ea0cc22d6d82b
 }
