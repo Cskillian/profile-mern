@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var uniqueValidator = require('mongoose-unique-validator');
 var schema = mongoose.Schema;
 
-  var UserSchema = new Schema({
+  var UserSchema = new schema({
     user_name: {
       type:String,
       unique:true,
@@ -25,7 +25,7 @@ var schema = mongoose.Schema;
       required:true
     },
     bio: {
-      type:Text
+      type:String
     },
     state: {
       type:String

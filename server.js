@@ -22,8 +22,13 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 //serve our public folder
 app.use(express.static('./public'));
 
+//Routes
+app.get(`*`, function(req, res) {
+  res.sendFile('public/index.html', { root: __dirname });
+});
+
 //mongoose
-mongoose.connect('mongodb://localhost/3000/profile-mern');
+mongoose.connect('mongodb://server:server@ds137149.mlab.com:37149/heroku_phs24q4l');
 var db = mongoose.connection;
 
 db.on('error', function (err) {
