@@ -23,7 +23,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('./public'));
 
 //Routes
-app.get(`*`, function(req, res) {
+app.get('*', function(req, res) {
   res.sendFile('public/index.html', { root: __dirname });
 });
 
